@@ -6,7 +6,7 @@ const movieSchema = new Schema({
     releaseDate: {type: Date, require: true},
     duration: {type: String, require: true},
     genres: [{type: String, require: true}],
-    calification: {type: Int16Array, require: true},
+    calification: {type: Numeric, require: true},
     country: {type: String, require: true},
     summary: {type: String, require: true},
     directors: [{type: String, require: true}],
@@ -14,4 +14,4 @@ const movieSchema = new Schema({
     cast: [{type: String, require: true}]
 });
 
-module.exports = mongoose.model('movie', movieSchema);
+module.exports = mongoose.model('movies', movieSchema);

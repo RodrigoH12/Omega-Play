@@ -13,4 +13,4 @@ const userSchema = new Schema({
     movies: [{type : Schema.ObjectId, ref:"movies", require:false}] 
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('users', userSchema);
