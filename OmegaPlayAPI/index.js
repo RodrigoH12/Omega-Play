@@ -13,7 +13,6 @@ app.set('Port', process.env.PORT || 4004);
 
 app.use(morgan('dev'));
 app.use('/api/',require('./routes/movie.route'))
-
 app.use('/api/', require('./routes/user.route'))
 
 app.listen(app.get('Port'), ()=>{
