@@ -3,6 +3,7 @@ const {Schema} = mongoose;
 const movieSchema = new Schema({
     title: {type: String, require:true},
     src: {type: String, require: true},
+    images: [{type: String, require: true}],
     releaseDate: {type: Date, require: true},
     duration: {type: String, require: true},
     genres: [{type: String, require: true}],
