@@ -13,7 +13,7 @@ export default function MovieCard({data}) {
     };
 
     return (
-        <Card className="h-100 shadow-sm rounded">
+        <Card className="h-100 shadow-sm rounded" bg='dark'>
             <Card.Img variant="top" src={data.images[0]} />
             <Card.Body className="d-flex flex-column">
                 <Card.Title className="text-left text-white text-uppercase">{data.title}</Card.Title>

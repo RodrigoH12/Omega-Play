@@ -1,7 +1,7 @@
 [
     {
         "_id":"60873cdec291770a74b7dfc1",
-        "genres":["Action","Adventure","Thriller"],
+        "genres":["Acción","Aventura","Suspenso"],
         "directors":["Zack Snyder"],
         "cast":["Dave Bautista","Ella Purnell","Ana de la Reguera","Garret Dillahunt","Raul Castillo","Omari Hardwick"],
         "title":"Army of the Dead",
@@ -10,13 +10,13 @@
         "releaseDate":"2021-05-21",
         "duration":"2h 28m",
         "calification":4,
-        "country":"United States",
+        "country":"Estados Unidos",
         "summary":"Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever ,attempted.",
         "productionCompany":"Netflix"
     },
     {
         "_id":"60873a1800207d2bdcf1ca1e",
-        "genres":["Action","Adventure","Superheroes"],
+        "genres":["Acción","Aventura","Superhéroes"],
         "directors":["Zack Snyder"],
         "cast":["Henry Cavill","Ben Affleck","Ezra Miller","Gal Galdot","Ray Fisher","Jason Momoa"],
         "title":"Zack Snyder's Justice League",
@@ -25,13 +25,13 @@
         "releaseDate":"2021-03-18",
         "duration":"4h 2m",
         "calification":4,
-        "country":"United States",
+        "country":"Estados Unidos",
         "summary":"Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
         "productionCompany":"Warner Bros"
     },
     {
         "_id":"6091cafb930dc59210e034ba"
-        ,"genres":["Action","Adventure","Superheroes"],
+        ,"genres":["Acción","Aventura","Superhéroes"],
         "directors":["Anthony Russo","Joe Russo"],
         "cast":["Robert Downey Jr.","Chris Evans","Mark Ruffalo","Chris Hemsworth","Scarlett Johansson","Jeremy Renner","Paul Rudd","Benedict Cumberbatch","Chadwick Boseman","Brie Larson","Tom Holland","Elizabeth Olsen"],
         "title":"Avengers: Endgame",
@@ -40,7 +40,7 @@
         "releaseDate":"2019-04-26",
         "duration":"3h 1m",
         "calification":4.3,
-        "country":"United States",
+        "country":"Estados Unidos",
         "summary":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
         "productionCompany":"Marvel Studios"
     }
