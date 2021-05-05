@@ -17,10 +17,12 @@ export default function MovieCard({data}) {
             <Card.Img variant="top" src={data.images[0]} />
             <Card.Body className="d-flex flex-column">
                 <Card.Title className="text-left text-white text-uppercase">{data.title}</Card.Title>
-                <Card.Text>Estreno: {data.releaseDate}</Card.Text>
-                <Card.Text>Géneros: {getGenres(data.genres)}</Card.Text>
-                <Card.Text>Calificación: {data.calification}/5</Card.Text>
+                <div>
+                    <Card.Text className="alignleft">⭐{data.calification}/5</Card.Text>
+                    <Card.Text className="alignright">📅 {data.releaseDate}</Card.Text>
+                </div>
                 <Card.Text>País: {data.country}</Card.Text>
+                <Card.Text>Géneros: {getGenres(data.genres)}</Card.Text>
             </Card.Body>
         </Card>
     );
