@@ -10,7 +10,7 @@ export default function MovieCard({data}) {
             result = `${genre}, ${result}`
         });
         return result.slice(0, -2);
-    }
+    };
 
     return (
         <Card className="h-100 shadow-sm rounded">
@@ -23,5 +23,5 @@ export default function MovieCard({data}) {
                 <Card.Text>País: {data.country}</Card.Text>
             </Card.Body>
         </Card>
-    )
+    );
 }
