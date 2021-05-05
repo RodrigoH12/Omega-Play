@@ -1,0 +1,47 @@
+[
+    {
+        "_id":"60873cdec291770a74b7dfc1",
+        "genres":["Action","Adventure","Thriller"],
+        "directors":["Zack Snyder"],
+        "cast":["Dave Bautista","Ella Purnell","Ana de la Reguera","Garret Dillahunt","Raul Castillo","Omari Hardwick"],
+        "title":"Army of the Dead",
+        "src":"https://www.youtube.com/watch?v=tI1JGPhYBS8",
+        "images":["https://www.vitalthrills.com/wp-content/uploads/2021/02/army-of-the-dead-poster.jpg",""],
+        "releaseDate":"2021-05-21",
+        "duration":"2h 28m",
+        "calification":4,
+        "country":"United States",
+        "summary":"Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever ,attempted.",
+        "productionCompany":"Netflix"
+    },
+    {
+        "_id":"60873a1800207d2bdcf1ca1e",
+        "genres":["Action","Adventure","Superheroes"],
+        "directors":["Zack Snyder"],
+        "cast":["Henry Cavill","Ben Affleck","Ezra Miller","Gal Galdot","Ray Fisher","Jason Momoa"],
+        "title":"Zack Snyder's Justice League",
+        "src":"https://www.youtube.com/watch?v=ZrdQSAX2kyw",
+        "images":["https://blogdesuperheroes.es/imagen-noti/102648_big.jpg",""],
+        "releaseDate":"2021-03-18",
+        "duration":"4h 2m",
+        "calification":4,
+        "country":"United States",
+        "summary":"Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
+        "productionCompany":"Warner Bros"
+    },
+    {
+        "_id":"6091cafb930dc59210e034ba"
+        ,"genres":["Action","Adventure","Superheroes"],
+        "directors":["Anthony Russo","Joe Russo"],
+        "cast":["Robert Downey Jr.","Chris Evans","Mark Ruffalo","Chris Hemsworth","Scarlett Johansson","Jeremy Renner","Paul Rudd","Benedict Cumberbatch","Chadwick Boseman","Brie Larson","Tom Holland","Elizabeth Olsen"],
+        "title":"Avengers: Endgame",
+        "src":"https://youtu.be/TcMBFSGVi1c",
+        "images":["https://www.vintagemovieposters.co.uk/wp-content/uploads/2019/10/IMG_1862.jpeg",""],
+        "releaseDate":"2019-04-26",
+        "duration":"3h 1m",
+        "calification":4.3,
+        "country":"United States",
+        "summary":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+        "productionCompany":"Marvel Studios"
+    }
+]
