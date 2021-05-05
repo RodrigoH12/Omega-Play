@@ -2,7 +2,7 @@ import "./App.css";
 import Search from "./components/Search";
 import MoviesCarousel from './components/MoviesCarousel'
 import ApplicationHeaderComponent from './components/ApplicationHeaderComponent';
-import { Container} from "react-bootstrap";
+import MovieDetail from './components/MovieDetail'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <MoviesCarousel />
         <Search />
       </div>
+      <MovieDetail/>
     </div>
   );
 }
