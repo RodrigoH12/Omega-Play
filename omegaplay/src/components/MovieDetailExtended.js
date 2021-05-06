@@ -1,7 +1,14 @@
 import React from 'react'
 import { Image, Row, Col, Jumbotron } from "react-bootstrap";
 
-export default function MovieDetailExtended() {
+export default function MovieDetailExtended({ data }) {
+    const arrayToList = (list) => {
+        var result = '';
+        list.forEach(item => {
+            result = `${item}, ${result}`
+        });
+        return result.slice(0, -2);
+    };
     return (
         <Jumbotron fluid style={{ padding: '20px' }}>
             <Col align="justify">
@@ -10,7 +17,7 @@ export default function MovieDetailExtended() {
                         <b>Summary:</b>
                     </Col>
                     <Col>
-                        <p>Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted.</p>
+                        <p>{data.summary}</p>
                     </Col>
                 </Row>
                 <Row>
@@ -18,7 +25,7 @@ export default function MovieDetailExtended() {
                         <b>Director:</b>
                     </Col>
                     <Col>
-                        <p>Zack Snyder</p>
+                        <p>{arrayToList(data.directors)}</p>
                     </Col>
                 </Row>
                 <Row>
@@ -26,7 +33,7 @@ export default function MovieDetailExtended() {
                         <b>Cast:</b>
                     </Col>
                     <Col>
-                        <p> Dave Bautista, Ella Purnell, Ana de la Reguera, Garret Dillahunt, Raul Castillo, Omari Hardwick </p>
+                        <p>{arrayToList(data.cast)}</p>
                     </Col>
                 </Row>
                 <Row>
@@ -34,25 +41,25 @@ export default function MovieDetailExtended() {
                         <b>Production Company:</b>
                     </Col>
                     <Col>
-                        <p>Netflix</p>
+                        <p>{data.productionCompany}</p>
                     </Col>
                 </Row>
-                <hr/>
+                <hr />
                 <Row>
                     <Col md={3} xs={5}>
                         <b>Artwork:</b>
                     </Col>
                 </Row>
-                <br/>
+                <br />
                 <Row align="right">
                     <Col md={4} xs={6}>
-                        <Image rounded width="100%" src="https://cdn3.movieweb.com/i/article/cy0UDBFHp8XSSKJw1vqEXAz6CTAx9H/1200:100/Army-Of-The-Dead-Trailer-2.jpg" />
+                        <Image width="100%" src={data.images[1]} />
                     </Col>
                     <Col md={4} xs={6}>
-                        <iframe height="100%" width="100%" src="https://www.youtube.com/embed/tI1JGPhYBS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <Image width="100%" src={data.images[2]} />   
                     </Col>
                     <Col md={4} xs={6}>
-                        <Image rounded width="100%" src="https://i2.wp.com/hipertextual.com/wp-content/uploads/2021/02/army-of-the-dead.jpg" />
+                        <Image width="100%" src={data.images[3]} />
                     </Col>
                 </Row>
             </Col>

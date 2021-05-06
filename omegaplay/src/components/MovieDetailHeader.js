@@ -2,18 +2,25 @@ import React from 'react'
 import { Image, Row, Col, Jumbotron, Button} from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 
-export default function MovieDetailHeader() {
+export default function MovieDetailHeader({data}) {
     const playButtonClick = (e) => {
         console.log("Pressed " + e);
     }
+    const getGenres = (genres) => {
+        var result = '';
+        genres.forEach(genre => {
+            result = `${genre}, ${result}`
+        });
+        return result.slice(0, -2);
+    };
     return (
         <Jumbotron fluid style={{ padding: '20px' }}>
             <Row>
                 <Col md={5}>
-                    <Image rounded width="100%" src="https://www.vitalthrills.com/wp-content/uploads/2021/02/army-of-the-dead-poster.jpg" />
+                    <Image rounded width="100%" src={data.images[0]} />
                 </Col>
                 <Col align="left" md={4}>
-                    <h1 >Army of The Dead</h1>
+                    <h1 >{data.title}</h1>
                     <div>
                         <Icon.StarFill />
                         <Icon.StarFill />
@@ -21,13 +28,13 @@ export default function MovieDetailHeader() {
                         <Icon.StarFill />
                         <Icon.Star />
                     </div>
-                    <p>2h 28m</p>
+                    <p>{data.duration}</p>
 
                     <br />
                     <br />
-                    <p size="10px">Release Date: 15/06/2020</p>
-                    <p>Genres: Action, Adventure, Thriller</p>
-                    <p>Country: United States</p>
+                    <p size="10px">Release Date: {data.releaseDate}</p>
+                    <p>Genres: {getGenres(data.genres)}</p>
+                    <p>Country: {data.country}</p>
                 </Col>
                 <Col align="left" md={3}>
                     <Row>
