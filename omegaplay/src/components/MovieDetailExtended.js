@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image, Row, Col, Jumbotron } from "react-bootstrap";
+import '../stylesheets/MovieDetailExtended.css'
 
 export default function MovieDetailExtended({ data }) {
     const arrayToList = (list) => {
@@ -53,13 +54,13 @@ export default function MovieDetailExtended({ data }) {
                 <br />
                 <Row align="right">
                     <Col md={4} xs={6}>
-                        <Image width="100%" src={data.images[1]} />
+                        <Image className="movieArtwork" width="100%" src={data.images[1]} />
                     </Col>
                     <Col md={4} xs={6}>
-                        <Image width="100%" src={data.images[2]} />   
+                        <Image className="movieArtwork" width="100%" src={data.images[2]} />   
                     </Col>
                     <Col md={4} xs={6}>
-                        <Image width="100%" src={data.images[3]} />
+                        <Image className="movieArtwork" width="100%" src={data.images[3]} />
                     </Col>
                 </Row>
             </Col>

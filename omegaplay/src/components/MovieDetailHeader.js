@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Image, Row, Col, Jumbotron, Button } from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
+import '../stylesheets/MovieDetailHeader.css'
 
 export default function MovieDetailHeader({ data }) {
     const [showScore, setShowScore] = useState(false);
@@ -57,15 +58,15 @@ export default function MovieDetailHeader({ data }) {
         <Jumbotron fluid style={{ padding: '20px' }}>
             <Row>
                 <Col md={5}>
-                    <Image rounded width="100%" src={data.images[0]} />
+                    <Image className="movieThumbnail" src={data.images[0]} />
                 </Col>
                 <Col align="left" md={4}>
-                    <h1 >{data.title}</h1>
+                    <h2>{data.title}</h2>
                     <div
                         onMouseEnter={() => setShowScore(true)}
                         onMouseLeave={() => setShowScore(false)}>
                         {showScore ?
-                            <b><Icon.StarFill/> {data.calification}</b> : <GetStars calification={data.calification} /> }
+                            <b><Icon.StarFill /> {data.calification}</b> : <GetStars calification={data.calification} />}
                     </div>
                     <p>{data.duration}</p>
                     <br />

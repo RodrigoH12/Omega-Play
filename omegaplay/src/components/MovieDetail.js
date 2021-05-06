@@ -13,6 +13,18 @@ export default function MovieDetail() {
                 <MovieDetailExtended data = {movies[0]}/>
               </Col>
             </Row>
+            <Row>
+            <Col className="mb-5" key={movies[1]._id}>
+                <MovieDetailHeader data = {movies[1]}/>
+                <MovieDetailExtended data = {movies[1]}/>
+              </Col>
+            </Row>
+            <Row>
+            <Col className="mb-5" key={movies[2]._id}>
+                <MovieDetailHeader data = {movies[2]}/>
+                <MovieDetailExtended data = {movies[2]}/>
+              </Col>
+            </Row>
         </Container>
     );
 }
