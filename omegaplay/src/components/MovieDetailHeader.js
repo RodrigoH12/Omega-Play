@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Image, Row, Col, Jumbotron, Button, ButtonGroup } from "react-bootstrap";
+import { Image, Row, Col, Jumbotron, Button} from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 
 export default function MovieDetailHeader() {
