@@ -23,12 +23,12 @@ export default function MovieDetailHeader({ data }) {
         var result = '';
         for (var i = 0; i < 5; i++) {
             if (temp >= 0.5) {
-                if (temp > 1) {
-                    result = result + '2';
-                    temp -= 1;
-                } else {
+                if (temp < 1) {
                     result = result + '1';
                     temp -= 0.5;
+                } else {
+                    result = result + '2';
+                    temp -= 1;
                 }
             } else {
                 result = result + '0';
