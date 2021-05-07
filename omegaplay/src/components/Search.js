@@ -10,7 +10,7 @@ export default function Search() {
 	const filterMovies = () => {
 		var filteredResult = movies;
 
-		if (search != "") {
+		if (search !== "") {
 			filteredResult = movies.filter(movie => movie.title.toLowerCase() === search.toLowerCase());
 		}
 

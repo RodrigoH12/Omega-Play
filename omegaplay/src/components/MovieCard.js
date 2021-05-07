@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import '../stylesheets/MovieCard.css'
+import "../stylesheets/MovieCard.css";
 
 export default function MovieCard({data}) {
 

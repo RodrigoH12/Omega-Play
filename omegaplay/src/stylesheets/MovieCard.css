@@ -24,3 +24,14 @@
 .alignright {
 	float: right;
 }
+
+.carousel {
+    width: 700px;
+    height: 400px;
+}
+
+#carouselImg{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
