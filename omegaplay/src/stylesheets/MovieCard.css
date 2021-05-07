@@ -28,6 +28,7 @@
 .carousel {
     width: 700px;
     height: 400px;
+    margin: auto;
 }
 
 #carouselImg{

@@ -1,11 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { InputGroup, FormControl, Button, Container } from "react-bootstrap";
-import movies from "../mockedData/data.json";
 import MovieCardGrid from "./MovieCardGrid";
 import Filters from "./Filters";
+import axios from 'axios';
 
 export default function Search() {
 	const [search, setSearch] = useState("");
+	const [movies, setMovies] = useState([]);
+
+	useEffect(() => {
+	
+		const getMoviesAxios = async () => {
+			try {
+				const {data} = await axios.get('http://localhost:4004/api/movie');
+				console.log(data);
+				setMovies(data);
+			} catch (err) {
+				console.log(err);
+			}
+		};
+
+		getMoviesAxios();
+	
+	}, []);
 
 	const filterMovies = () => {
 		var filteredResult = movies;
