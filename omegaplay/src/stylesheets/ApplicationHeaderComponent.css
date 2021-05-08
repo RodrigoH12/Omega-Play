@@ -1,0 +1,40 @@
+.header-toolbar{
+    position: fixed;
+    width: 100%;
+}
+
+.sidebar{
+    background-color: #272727;
+    top: 64px;
+    left: 0px;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.sidebarOn{
+    animation-name: appear;
+    animation-duration: 1000ms;
+}
+
+.sidebarOff{
+    opacity: 0;
+    left:-300px;
+    animation-name: dissappear;
+    animation-duration: 1000ms;
+}
+
+@keyframes appear {
+    0%   {left:-300px; opacity: 0; }
+    90%   {opacity: 1; }
+    100% {left:0px; opacity: 1;}
+}
+
+@keyframes dissappear {
+    0% {left:0px; opacity: 1;}
+    80%   {opacity: 0; }
+    100%   {left:-300px; opacity: 0; }
+}
+

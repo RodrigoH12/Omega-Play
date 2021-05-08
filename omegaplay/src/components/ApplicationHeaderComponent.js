@@ -3,17 +3,23 @@ import { Container, Form, FormControl, Button, Navbar, NavDropdown, Nav, Image }
 import * as Icon from "react-bootstrap-icons";
 import SideBarComponent from "./SideBarComponent";
 import logo from "../logo.svg";
+import "../stylesheets/ApplicationHeaderComponent.css";
 
 export default function ApplicationHeaderComponent() {
-    const [sidebar, setSidebar] = useState(false);
+    const [sidebar, setSidebar] = useState(true);
     const [loginUser, setloginUser] = useState("OmegaDev");
     const [sessionStatus, setSessionStatus] = useState(false);
 
     return (
-        <div>
-            <Navbar bg="light" expand="lg">
+        <div className="header-toolbar">
+            <Navbar bg="light" expand="lg" style={{ height: "64px" }}>
                 {sessionStatus ?
-                    <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
+                    <div>
+                        <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
+                        <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
+                            <SideBarComponent />
+                        </div>
+                    </div>
                     :
                     <div />
                 }
@@ -32,13 +38,10 @@ export default function ApplicationHeaderComponent() {
                             Signed in as: <b>{loginUser}</b>
                         </Navbar.Text>
                         :
-                        <Button variant="outline" onClick={()=> {setSessionStatus(true)}}>Log in</Button>
+                        <Button variant="outline" onClick={() => { setSessionStatus(true) }}>Log in</Button>
                     }
                 </Nav>
             </Navbar>
-            <div>
-                {sidebar ? <SideBarComponent /> : <div />}
-            </div>
         </div>
     );
 }
