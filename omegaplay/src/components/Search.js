@@ -28,7 +28,7 @@ export default function Search() {
 		var filteredResult = movies;
 
 		if (search !== "") {
-			filteredResult = movies.filter(movie => movie.title.toLowerCase() === search.toLowerCase());
+			filteredResult = movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()));
 		}
 
 		return filteredResult;

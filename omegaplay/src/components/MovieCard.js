@@ -36,7 +36,7 @@ export default function MovieCard({data}) {
                 <Card.Title className="text-left text-white text-uppercase">{data.title}</Card.Title>
                 <div>
                     <Card.Text className="alignleft">⭐{data.calification}/5</Card.Text>
-                    <Card.Text className="alignright">📅 {changeDateformat(new Date(data.releaseDate))}</Card.Text>
+                    <Card.Text className="alignright">📅{changeDateformat(new Date(data.releaseDate))}</Card.Text>
                 </div>
                 <Card.Text>Country: {data.country}</Card.Text>
                 <Card.Text>Genres: {getGenres(data.genres)}</Card.Text>
