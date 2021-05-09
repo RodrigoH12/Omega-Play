@@ -13,8 +13,9 @@ h3 {
     font-weight: 500;
     font-family: 'Fira Sans', sans-serif;
 }
+
 a {
-    color:#ffffff;
+    color: #ffffff;
 }
 
 body,
@@ -80,4 +81,22 @@ html,
     width: 300px;
     height: 200px;
     object-fit: cover;
-  }
+}
+
+.card-img-top {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+    background: #424242;
+
+}
+
+.colAvatar {
+    padding-right: 15px;
+    padding-left: 0px;
+}

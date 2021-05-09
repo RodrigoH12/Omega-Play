@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Button, Carousel } from 'react-bootstrap';
 import { Link } from "react-router-dom";
+import useStore from '../../zustand/login';
 import './custom.css';
 
 export default function Login(props) {
+    const user = useStore(state => state.user);
+    const fetchUser = useStore(state => state.fetchUser);
     const [username, setUsername] = useState();
     const [pass, setPass] = useState();
     const [validated, setValidated] = useState(false);
     const { handleLogin } = props;
 
+    useEffect(() => {
+        if(username !== undefined && pass !== undefined) {
+            fetchUser(username, pass);
+        }
+    }, [username, pass, fetchUser]);
+    
     const handleSubmit = (event) => {
-
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         } else {
-            if (username === "test" && pass === "123") {
-                console.log("Username: " + username);
-                console.log("Password: " + pass);
+            if (username === user[0].userName && pass === user[0].password) {
                 handleLogin(event);
-                props.history.push('/home'); 
+                props.history.push('/home');
+            } else {
+                alert("User and password didn't match!")
             }
         }
         setValidated(true);

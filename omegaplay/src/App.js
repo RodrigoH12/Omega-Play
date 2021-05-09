@@ -9,8 +9,9 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import Login from './components/Forms/Login';
 import Register from './components/Forms/Register';
 import Home from './components/Home';
-import ProtectedRoute from './components/Forms/Protectedroute'
+import ProtectedRoute from './components/Forms/Protectedroute';
 import React, { useState } from 'react';
+import Avatar from './components/Forms/Avatar';
 
 >>>>>>> c88d575 (Implementation of forms UI and protected routes.)
 
@@ -53,6 +54,7 @@ function App() {
           <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
           <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
           <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
+          <Route exact path="/avatars" handleLogin={handleLogin} render={props => <Avatar {...props} user={user.toString()} handleLogin={handleLogin} />}/>
         </Switch>
       </div>
     </Router>

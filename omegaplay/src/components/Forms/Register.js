@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
+import useStore from '../../zustand/register';
 import './custom.css';
 
 export default function Register(props) {
+    const registerUser = useStore(state => state.registerUser);
     const [username, setUsername] = useState();
     const [pass, setPass] = useState();
     const [repeatPass, setRepeatPass] = useState();
@@ -12,25 +14,26 @@ export default function Register(props) {
     const [country, setCountry] = useState();
     const [city, setCity] = useState();
     const [validated, setValidated] = useState(false);
-    const { handleLogin } = props;
 
     const handleSubmit = (event) => {
-        console.log("Username: " + username);
-        console.log("Password: " + pass);
-        console.log("Username: " + repeatPass);
-        console.log("Password: " + email);
-        console.log("Username: " + birth);
-        console.log("Password: " + genre);
-        console.log("Username: " + country);
-        console.log("Password: " + city);
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
         } else {
+            const userObject = {
+                userName: username,
+                password: pass,
+                email: email,
+                genre: genre,
+                birthDate: birth,
+                country: country,
+                city: city
+
+            }
             if (pass === repeatPass) {
-                handleLogin(event);
-                props.history.push('/home');
+                registerUser(userObject);
+                props.history.push('/avatars');
             } else {
                 alert("The passwords you entered doesn't match!");
             }
