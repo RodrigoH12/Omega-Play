@@ -1,8 +1,7 @@
 import "./App.css";
-import Search from "./components/Search";
-import MoviesCarousel from './components/MoviesCarousel'
-import ApplicationHeaderComponent from './components/ApplicationHeaderComponent';
-import { Container} from "react-bootstrap";
+import Search from "./components/SearchComponent/Search";
+import MoviesCarousel from './components/Home/MoviesCarousel'
+import ApplicationHeaderComponent from './components/ApplicationHeader/ApplicationHeaderComponent';
 
 function App() {
   return (
@@ -17,5 +16,4 @@ function App() {
     </div>
   );
 }
-//  <ApplicationHeaderComponent/>
 export default App;

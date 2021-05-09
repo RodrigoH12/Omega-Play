@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, ListGroup, Row, Col } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
-import "../stylesheets/SideBarComponent.css"
+import "../../stylesheets/SideBarComponent.css"
 
 export default function ApplicationHeaderComponent() {
     return (
