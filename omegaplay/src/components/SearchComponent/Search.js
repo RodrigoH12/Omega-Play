@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { InputGroup, FormControl, Button, Container } from "react-bootstrap";
-import MovieCardGrid from "./MovieCardGrid";
+import MovieCardGrid from "../MovieList/MovieCardGrid";
 import Filters from "./Filters";
 import axios from 'axios';
 

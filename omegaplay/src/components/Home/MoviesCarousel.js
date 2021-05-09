@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../stylesheets/MovieCard.css";
+import "../../stylesheets/MovieCard.css";
 import { Carousel } from "react-bootstrap";
 import axios from 'axios';
 

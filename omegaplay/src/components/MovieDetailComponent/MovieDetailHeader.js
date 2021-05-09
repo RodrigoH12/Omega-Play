@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Image, Row, Col, Jumbotron, Button } from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
-import '../stylesheets/MovieDetailHeader.css'
+import '../../stylesheets/MovieDetailHeader.css'
 
 export default function MovieDetailHeader({ data }) {
     const [showScore, setShowScore] = useState(false);

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Container, Form, FormControl, Button, Navbar, NavDropdown, Nav, Image } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import SideBarComponent from "./SideBarComponent";
-import logo from "../logo.svg";
-import "../stylesheets/ApplicationHeaderComponent.css";
+import logo from "../../assets/logo.svg";
+import "../../stylesheets/ApplicationHeaderComponent.css";
 
 export default function ApplicationHeaderComponent() {
     const [sidebar, setSidebar] = useState(true);

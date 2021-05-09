@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, Row, Col, Jumbotron } from "react-bootstrap";
-import '../stylesheets/MovieDetailExtended.css'
+import '../../stylesheets/MovieDetailExtended.css'
 
 export default function MovieDetailExtended({ data }) {
     const arrayToList = (list) => {
