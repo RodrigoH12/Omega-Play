@@ -9,6 +9,8 @@ require("./database")
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
+app.use(cors());
+
 app.set('Port', process.env.PORT || 4004);
 
 app.use(morgan('dev'));
