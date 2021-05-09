@@ -12,26 +12,25 @@ export default function ApplicationHeaderComponent() {
 
     return (
         <div className="header-toolbar">
-            <Navbar bg="light" expand="lg" style={{ height: "64px" }}>
-                {sessionStatus ?
-                    <div>
-                        <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
-                        <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
-                            <SideBarComponent />
-                        </div>
-                    </div>
-                    :
-                    <div />
-                }
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar className="justify-content-between" bg="dark" expand="lg" style={{ height: "64px" }}>
+                <Navbar id="basic-navbar-nav">
                     <Nav>
+                        {sessionStatus ?
+                            <div>
+                                <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
+                                <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
+                                    <SideBarComponent />
+                                </div>
+                            </div>
+                            :
+                            <div />
+                        }
                         <Navbar.Brand>
                             <Image src={logo} width="50px"></Image>
                             Omega Play
                         </Navbar.Brand>
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar>
                 <Nav>
                     {sessionStatus ?
                         <Navbar.Text>

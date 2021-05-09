@@ -38,9 +38,6 @@ export default function Search() {
 		<Container>
 			<InputGroup className="mb-3">
 				<FormControl placeholder="Search for a movie" onChange={(e) => setSearch(e.target.value)}/>
-				<InputGroup.Append>
-					<Button variant="secondary">Search</Button>
-				</InputGroup.Append>
 			</InputGroup>
 			<Filters/>
 			<MovieCardGrid movies={filterMovies()}></MovieCardGrid>
