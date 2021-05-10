@@ -12,7 +12,7 @@ export default function MoviesCarousel() {
 	}, []);
 
   return (
-    <div style={{paddingTop: '94px', paddingBottom: '30px'}}>
+    <div style={{ paddingBottom: '30px'}}>
       <Carousel className="moviesCarousel">
         {
           movies.slice(Math.max(movies.length - 5, 0)).map((movie) => {

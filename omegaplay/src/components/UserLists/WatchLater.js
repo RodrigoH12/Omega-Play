@@ -24,14 +24,14 @@ export default function WatchLater(props) {
 
 
     return (
-        <Container style={{ paddingTop: "100px" }}>
+        <Container>
             <h1 style={{ color: "white" }}>Watch Later</h1>
             <br/>
             {
                 watchLater.length ===0 ?
                 <>
                 <h3 style={{ color: "green" }}>This is currently empty.</h3>
-                <Link to="/home">Go home</Link>
+                <Link to="/home">Go Home</Link>
                 </>
                 :
                 <MovieCardGrid movies={watchLater}></MovieCardGrid>

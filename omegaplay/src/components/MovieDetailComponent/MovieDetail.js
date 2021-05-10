@@ -25,7 +25,7 @@ export default function MovieDetail() {
   }, []);
 
   return (
-    <Container style={{ paddingTop: "100px" }}>
+    <Container>
        {movies.map((data) => (
       <Row key={data}>
         <Col className="mb-5" key={data}>

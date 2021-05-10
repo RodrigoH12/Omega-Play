@@ -17,7 +17,7 @@ export default function ApplicationHeaderComponent() {
                             <Col>Home</Col>
                         </Row>
                 </ListGroup.Item>
-                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/movie")}} >
+                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/search")}} >
                     <Row >
                         <Col xs={1}></Col>
                         <Col xs={2}> <Icon.Search /></Col>

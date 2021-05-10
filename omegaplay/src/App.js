@@ -10,6 +10,7 @@ import ApplicationHeaderComponent from './components/ApplicationHeader/Applicati
 import MovieDetail from './components/MovieDetailComponent/MovieDetail';
 import History from './components/UserLists/History';
 import WatchLater from './components/UserLists/WatchLater';
+import Search from './components/SearchComponent/Search';
 
 function App() {
 
@@ -29,26 +30,29 @@ function App() {
     <Router>
       <div className="App">
         <ApplicationHeaderComponent user={user} handleLogout={handleLogout} />
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return (
-                { user } ?
-                  <Redirect to="/home" /> :
-                  <Redirect to="/sign-in" />
-              )
-            }}
-          />
-          <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
-          <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
-          <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
-          <ProtectedRoute exact path="/avatar" user={user} handleLogin={handleLogin} component={Avatar} />
-          <ProtectedRoute path="/movie/:id" user={user} handleLogin={handleLogin} component={MovieDetail} />
-          <ProtectedRoute exact path="/history" user={user} handleLogin={handleLogin} component={History} />
-          <ProtectedRoute exact path="/watch-later" user={user} handleLogin={handleLogin} component={WatchLater} />
-        </Switch>
+        <div style={{paddingTop: "100px"}}>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return (
+                  { user } ?
+                    <Redirect to="/home" /> :
+                    <Redirect to="/sign-in" />
+                )
+              }}
+            />
+            <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
+            <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
+            <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
+            <ProtectedRoute exact path="/avatar" user={user} handleLogin={handleLogin} component={Avatar} />
+            <ProtectedRoute path="/movie/:id" user={user} handleLogin={handleLogin} component={MovieDetail} />
+            <ProtectedRoute exact path="/history" user={user} handleLogin={handleLogin} component={History} />
+            <ProtectedRoute exact path="/watch-later" user={user} handleLogin={handleLogin} component={WatchLater} />
+            <ProtectedRoute exact path="/search" user={user} handleLogin={handleLogin} component={Search} />
+          </Switch>
+        </div>
       </div>
     </Router>
   );

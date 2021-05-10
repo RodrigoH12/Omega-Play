@@ -24,7 +24,7 @@ export default function History(props) {
 
 
     return (
-        <Container style={{ paddingTop: "100px" }}>
+        <Container>
             <h1 style={{ color: "white" }}>History</h1>
             <br />
             {
