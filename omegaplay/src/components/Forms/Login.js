@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button, Carousel } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import useStore from '../../zustand/login';
+import useStoreMovies from '../../zustand/movies';
 import '../../stylesheets/Forms.css';
 
 export default function Login(props) {
@@ -11,13 +12,18 @@ export default function Login(props) {
     const [pass, setPass] = useState();
     const [validated, setValidated] = useState(false);
     const { handleLogin } = props;
+    const { getMoviesAxios, movies } = useStoreMovies();
 
     useEffect(() => {
-        if(username !== undefined && pass !== undefined) {
+        getMoviesAxios();
+    }, []);
+
+    useEffect(() => {
+        if (username !== undefined && pass !== undefined) {
             fetchUser(username, pass);
         }
     }, [username, pass, fetchUser]);
-    
+
     const handleSubmit = (event) => {
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
@@ -41,27 +47,19 @@ export default function Login(props) {
                     <h3>Sign In</h3>
                     <Form.Group controlId="formGroupEmail" className="form-group">
                         <Carousel interval={3000}>
-                            <Carousel.Item>
-                                <img
-                                    className="carouselImgLogin"
-                                    src="https://picsum.photos/200"
-                                    alt=""
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carouselImgLogin"
-                                    src="https://picsum.photos/200"
-                                    alt=""
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item>
-                                <img
-                                    className="carouselImgLogin"
-                                    src="https://picsum.photos/200"
-                                    alt=""
-                                />
-                            </Carousel.Item>
+                            {
+                                movies.slice(Math.max(movies.length - 10, 0)).map((movie) => {
+                                    return (
+                                        <Carousel.Item key={movie._id}>
+                                            <img
+                                                className="carouselImgLogin"
+                                                src={movie.images[0]}
+                                                alt=""
+                                            />
+                                        </Carousel.Item>
+                                    );
+                                })
+                            }
                         </Carousel>
                     </Form.Group>
 

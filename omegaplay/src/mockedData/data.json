@@ -1,47 +1,38 @@
 [
     {
-        "_id":"60873cdec291770a74b7dfc1",
-        "genres":["Acción","Aventura","Suspenso"],
-        "directors":["Zack Snyder"],
-        "cast":["Dave Bautista","Ella Purnell","Ana de la Reguera","Garret Dillahunt","Raul Castillo","Omari Hardwick"],
-        "title":"Army of the Dead",
-        "src":"https://www.youtube.com/watch?v=tI1JGPhYBS8",
-        "images":["https://www.vitalthrills.com/wp-content/uploads/2021/02/army-of-the-dead-poster.jpg","https://cdn3.movieweb.com/i/article/cy0UDBFHp8XSSKJw1vqEXAz6CTAx9H/1200:100/Army-Of-The-Dead-Trailer-2.jpg","https://i2.wp.com/hipertextual.com/wp-content/uploads/2021/02/army-of-the-dead.jpg","https://cl.buscafs.com/www.tomatazos.com/public/uploads/images/320792/320792.png"],
-        "releaseDate":"2021-05-21",
-        "duration":"2h 28m",
-        "calification":4,
-        "country":"Estados Unidos",
-        "summary":"Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever ,attempted.",
-        "productionCompany":"Netflix"
+        "id": 1,
+        "src": "./images/ariel.png"
     },
     {
-        "_id":"60873a1800207d2bdcf1ca1e",
-        "genres":["Acción","Aventura","Superhéroes"],
-        "directors":["Zack Snyder"],
-        "cast":["Henry Cavill","Ben Affleck","Ezra Miller","Gal Galdot","Ray Fisher","Jason Momoa"],
-        "title":"Zack Snyder's Justice League",
-        "src":"https://www.youtube.com/watch?v=ZrdQSAX2kyw",
-        "images":["https://blogdesuperheroes.es/imagen-noti/102648_big.jpg","https://d22uy85tnpcynx.cloudfront.net/2021/03/Zack-Snyders-Justice-League-1024x574.jpg","https://cosmicbook.news/sites/default/files/justiceleaguett001.png","https://marijuanapy.com/wp-content/uploads/2020/08/Zack-Snyder-Reveals-Shocking-Justice-League-Snyder-Cut-Length-Watch-The.png"],
-        "releaseDate":"2021-03-18",
-        "duration":"4h 2m",
-        "calification":4,
-        "country":"Estados Unidos",
-        "summary":"Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.",
-        "productionCompany":"Warner Bros"
+        "id": 2,
+        "src": "./images/bible.png"
     },
     {
-        "_id":"6091cafb930dc59210e034ba"
-        ,"genres":["Acción","Aventura","Superhéroes"],
-        "directors":["Anthony Russo","Joe Russo"],
-        "cast":["Robert Downey Jr.","Chris Evans","Mark Ruffalo","Chris Hemsworth","Scarlett Johansson","Jeremy Renner","Paul Rudd","Benedict Cumberbatch","Chadwick Boseman","Brie Larson","Tom Holland","Elizabeth Olsen"],
-        "title":"Avengers: Endgame",
-        "src":"https://youtu.be/TcMBFSGVi1c",
-        "images":["https://s2.dmcdn.net/v/NokIb1VggoNaT4Zud/x1080","https://www.comicbookmovie.com/images/articles/banners/174022.jpg","https://wp.en.aleteia.org/wp-content/uploads/sites/2/2018/04/web3-marvel-movie-infinity-war-screenshot-marvel1.jpg","https://es.web.img3.acsta.net/pictures/18/03/16/15/56/5493108.jpg"],
-        "releaseDate":"2019-04-26",
-        "duration":"3h 1m",
-        "calification":4.5,
-        "country":"Estados Unidos",
-        "summary":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
-        "productionCompany":"Marvel Studios"
+        "id": 3,
+        "src": "./images/creeper.png"
+    },
+    {
+        "id": 4,
+        "src": "./images/mando.png"
+    },
+    {
+        "id": 5,
+        "src": "./images/minnie.png"
+    },
+    {
+        "id": 6,
+        "src": "./images/monkey.png"
+    },
+    {
+        "id": 7,
+        "src": "./images/panda.png"
+    },
+    {
+        "id": 8,
+        "src": "./images/skull.png"
+    },
+    {
+        "id": 9,
+        "src": "./images/spider.png"
     }
 ]
