@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Button, Col, Container, Row } from 'react-bootstrap';
-import useStore from '../../zustand/register';
+import useStore from '../../zustand/login';
 import '../../stylesheets/Forms.css';
 import images from '../../mockedData/data.json'
 

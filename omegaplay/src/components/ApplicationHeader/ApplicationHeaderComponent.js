@@ -8,9 +8,9 @@ import "../../stylesheets/ApplicationHeaderComponent.css";
 import { useHistory } from "react-router-dom";
 
 export default function ApplicationHeaderComponent(props) {
-    const user = useStore(state => state.user);
     const [sidebar, setSidebar] = useState(true);
     const history = useHistory();
+    const user = useStore(state => state.user);
 
     return (
         <div className="header-toolbar">
@@ -27,7 +27,7 @@ export default function ApplicationHeaderComponent(props) {
                             :
                             <div />
                         }
-                        <Navbar.Brand onClick={()=>{history.push("/")}} className="navigationBarBrand">
+                        <Navbar.Brand onClick={() => { history.push("/") }} className="navigationBarBrand">
                             <Image src={logo} width="50px"></Image>{' '}
                             Omega Play
                         </Navbar.Brand>
