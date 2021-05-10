@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Dropdown, DropdownButton, Row } from "react-bootstrap";
+import useStore from '../../zustand/filters';
 
 export default function Filters() {
-	const [genre, setGenre] = useState("All");
-	const [date, setDate] = useState("All");
-	const [country, setCountry] = useState("All");
+
+	const {setGenre, setDate, setCountry} = useStore();
 
 	return (
 			<Row>
@@ -25,7 +25,6 @@ export default function Filters() {
 					<Dropdown.Item eventKey="United States">United States</Dropdown.Item>
 					<Dropdown.Item eventKey="Bolivia">Bolivia</Dropdown.Item>
 				</DropdownButton>
-				{console.log(`genre: ${genre}, date: ${date}, country: ${country}`)}
 			</Row>
 	);
 }
