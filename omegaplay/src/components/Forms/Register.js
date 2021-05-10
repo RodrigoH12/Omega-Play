@@ -4,6 +4,7 @@ import useStore from '../../zustand/register';
 import '../../stylesheets/Forms.css';
 
 export default function Register(props) {
+    const { handleLogin } = props;
     const registerUser = useStore(state => state.registerUser);
     const [username, setUsername] = useState();
     const [pass, setPass] = useState();
@@ -32,8 +33,9 @@ export default function Register(props) {
 
             }
             if (pass === repeatPass) {
+                handleLogin(event);
                 registerUser(userObject);
-                props.history.push('/avatars');
+                props.history.push('/avatar');
             } else {
                 alert("The passwords you entered doesn't match!");
             }
