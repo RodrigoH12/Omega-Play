@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import MovieCardGrid from "../MovieList/MovieCardGrid";
 import useStoreUser from '../../zustand/login';
 import axios from 'axios';
@@ -26,7 +27,15 @@ export default function History(props) {
         <Container style={{ paddingTop: "100px" }}>
             <h1 style={{ color: "white" }}>History</h1>
             <br />
-            <MovieCardGrid movies={history}></MovieCardGrid>
+            {
+                history.length ===0 ?
+                <>
+                <h3 style={{ color: "green" }}>This is currently empty.</h3>
+                <Link to="/home">Go Home</Link>
+                </>
+                :
+                <MovieCardGrid movies={history}></MovieCardGrid>
+            }
         </Container>
     );
 }
