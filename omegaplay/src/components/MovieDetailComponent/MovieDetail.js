@@ -16,7 +16,6 @@ export default function MovieDetail() {
     const getMoviesAxios = async () => {
       try {
         const { data } = await axios.get('http://localhost:4004/api/movie/id/' + id.id );
-        console.log(data);
         setMovies(data);
       } catch (err) {
         console.log(err);

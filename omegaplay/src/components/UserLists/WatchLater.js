@@ -11,9 +11,7 @@ export default function WatchLater(props) {
     useEffect(() => {
         const getWatchLaterAxios = async () => {
             try {
-                console.log(user[0]._id)
                 const { data } = await axios.get('http://localhost:4004/api/user/' + user[0]._id + '/watch-later');
-                console.log(data);
                 setWatchLater(data[0].watchLater);
             } catch (err) {
                 console.log(err);
