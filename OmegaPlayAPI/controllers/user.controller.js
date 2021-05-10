@@ -73,7 +73,20 @@ UserCtrl.deleteUser = async (req, res) => {
 UserCtrl.addMovieToHistory = async (req, res) => {
     const userName = req.query.userName;
     const movie = req.query.movie;
-    await User.updateOne({ "userName": userName }, { $addToSet: { "movies": movie } });
+    await User.updateOne({ "userName": userName }, { $addToSet: { "history": movie } });
+    const updatedUser = await User.find({ userName: userName });
+
+    if (updatedUser.length <= 0) {
+        res.json({ "response": "A user with that username was not found" });
+    }
+
+    res.json(updatedUser);
+}
+
+UserCtrl.addMovieToWatchLater = async (req, res) => {
+    const userName = req.query.userName;
+    const movie = req.query.movie;
+    await User.updateOne({ "userName": userName }, { $addToSet: { "watchLater": movie } });
     const updatedUser = await User.find({ userName: userName });
 
     if (updatedUser.length <= 0) {
