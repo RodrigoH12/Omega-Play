@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-import "./App.css";
-import Search from "./components/SearchComponent/Search";
-import MoviesCarousel from './components/Home/MoviesCarousel'
-import ApplicationHeaderComponent from './components/ApplicationHeader/ApplicationHeaderComponent';
-=======
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Login from './components/Forms/Login';
 import Register from './components/Forms/Register';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import ProtectedRoute from './components/Forms/Protectedroute';
 import React, { useState } from 'react';
 import Avatar from './components/Forms/Avatar';
+import ApplicationHeaderComponent from './components/ApplicationHeader/ApplicationHeaderComponent';
 
->>>>>>> c88d575 (Implementation of forms UI and protected routes.)
 
 function App() {
 
@@ -32,13 +26,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <div>
-      <ApplicationHeaderComponent />
-      </div>
-      <div>
-        <MoviesCarousel />
-        <Search />
-      </div>
+        {/*<div>
+          <ApplicationHeaderComponent />*/}
         <Switch>
           <Route
             exact
@@ -54,7 +43,7 @@ function App() {
           <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
           <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
           <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
-          <Route exact path="/avatars" handleLogin={handleLogin} render={props => <Avatar {...props} user={user.toString()} handleLogin={handleLogin} />}/>
+          <ProtectedRoute exact path="/avatar" handleLogin={handleLogin} render={props => <Avatar {...props} user={user.toString()} handleLogin={handleLogin} />} />
         </Switch>
       </div>
     </Router>

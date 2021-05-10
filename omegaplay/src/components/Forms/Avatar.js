@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Card, Button, Col, Container, Row } from 'react-bootstrap';
 import useStore from '../../zustand/register';
-import './custom.css';
+import '../../stylesheets/Forms.css';
 
 export default function Avatar(props) {
     const avatars = [
@@ -67,8 +67,8 @@ export default function Avatar(props) {
                                 avatars.map((data) => (
                                     < Col xs={4} key={data.id} className="colAvatar mb-3">
 
-                                        <Card className="shadow-sm rounded" as="a" onClick={() => selectedAvatar(data.id)} style={{ cursor: "pointer" }}>
-                                            <Card.Img variant="top" src={data.src} />
+                                        <Card className="shadow-sm rounded avatarCard" as="a" onClick={() => selectedAvatar(data.id)} style={{ cursor: "pointer" }}>
+                                            <Card.Img variant="top" src={data.src} className="avatarCard"/>
                                         </Card>
 
                                     </Col>

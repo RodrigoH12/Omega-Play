@@ -26,7 +26,7 @@ export default function MoviesCarousel() {
 
   return (
     <div style={{paddingTop: '94px', paddingBottom: '30px'}}>   
-      <Carousel>
+      <Carousel className="moviesCarousel">
         {
           movies.map((movie) => {
             return (

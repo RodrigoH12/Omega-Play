@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button, Carousel } from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import useStore from '../../zustand/login';
-import './custom.css';
+import '../../stylesheets/Forms.css';
 
 export default function Login(props) {
     const user = useStore(state => state.user);
@@ -43,21 +43,21 @@ export default function Login(props) {
                         <Carousel interval={3000}>
                             <Carousel.Item>
                                 <img
-                                    className="carouselImg"
+                                    className="carouselImgLogin"
                                     src="https://picsum.photos/200"
                                     alt=""
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
-                                    className="carouselImg"
+                                    className="carouselImgLogin"
                                     src="https://picsum.photos/200"
                                     alt=""
                                 />
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
-                                    className="carouselImg"
+                                    className="carouselImgLogin"
                                     src="https://picsum.photos/200"
                                     alt=""
                                 />

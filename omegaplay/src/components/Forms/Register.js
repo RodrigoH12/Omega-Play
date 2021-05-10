@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Col } from 'react-bootstrap';
 import useStore from '../../zustand/register';
-import './custom.css';
+import '../../stylesheets/Forms.css';
 
 export default function Register(props) {
     const registerUser = useStore(state => state.registerUser);

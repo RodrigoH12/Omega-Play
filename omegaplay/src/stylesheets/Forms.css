@@ -77,19 +77,19 @@ html,
     background-color: #9fc5bd;
 }
 
-.carouselImg {
+.carouselImgLogin {
     width: 300px;
     height: 200px;
     object-fit: cover;
 }
 
-.card-img-top {
+.card-img-top.avatarCard {
     width: 90px;
     height: 90px;
     object-fit: cover;
 }
 
-.card {
+.card.avatarCard {
     width: 90px;
     height: 90px;
     background: #424242;

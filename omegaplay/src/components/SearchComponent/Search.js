@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { InputGroup, FormControl, Button, Container } from "react-bootstrap";
+import { InputGroup, FormControl, Container } from "react-bootstrap";
 import MovieCardGrid from "../MovieList/MovieCardGrid";
 import Filters from "./Filters";
 import axios from 'axios';
