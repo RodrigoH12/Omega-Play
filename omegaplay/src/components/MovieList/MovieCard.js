@@ -11,7 +11,7 @@ export default function MovieCard({ data }) {
 
     const OpenMovieDetails = () => {
         setMovieId(data) ;
-        history.push("/movie");
+        history.push("/movie/"+data._id);
     }
 
     const getGenres = (genres) => {
