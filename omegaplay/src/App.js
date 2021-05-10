@@ -7,6 +7,7 @@ import ProtectedRoute from './components/Forms/Protectedroute';
 import React, { useState } from 'react';
 import Avatar from './components/Forms/Avatar';
 import ApplicationHeaderComponent from './components/ApplicationHeader/ApplicationHeaderComponent';
+import MovieDetail from './components/MovieDetailComponent/MovieDetail';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <ApplicationHeaderComponent />
+        <ApplicationHeaderComponent user={user} handleLogout={handleLogout}/>
         <Switch>
           <Route
             exact
@@ -42,7 +43,8 @@ function App() {
           <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
           <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
           <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
-          <ProtectedRoute exact path="/avatar" user={user.toString()} handleLogin={handleLogin} component={Avatar} />
+          <ProtectedRoute exact path="/avatar" user={user} handleLogin={handleLogin} component={Avatar} />
+          <ProtectedRoute path="/movie" user={user} handleLogin={handleLogin} component={MovieDetail} />
         </Switch>
       </div>
     </Router>

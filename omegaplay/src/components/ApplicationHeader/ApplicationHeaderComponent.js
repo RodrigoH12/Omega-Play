@@ -3,19 +3,20 @@ import { Button, Navbar, Nav, Image } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import SideBarComponent from "./SideBarComponent";
 import logo from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
+import useStore from '../../zustand/login';
 import "../../stylesheets/ApplicationHeaderComponent.css";
 
-export default function ApplicationHeaderComponent() {
+export default function ApplicationHeaderComponent(props) {
+    const user = useStore(state => state.user);
     const [sidebar, setSidebar] = useState(true);
-    const [loginUser, setloginUser] = useState("OmegaDev");
-    const [sessionStatus, setSessionStatus] = useState(false);
 
     return (
         <div className="header-toolbar">
             <Navbar className="justify-content-between" bg="dark" expand="lg" style={{ height: "64px" }}>
                 <Navbar id="basic-navbar-nav">
                     <Nav>
-                        {sessionStatus ?
+                        {props.user ?
                             <div>
                                 <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
                                 <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
@@ -32,12 +33,14 @@ export default function ApplicationHeaderComponent() {
                     </Nav>
                 </Navbar>
                 <Nav>
-                    {sessionStatus ?
-                        <Navbar.Text>
-                            Signed in as: <b>{loginUser}</b>
-                        </Navbar.Text>
+                    {props.user ?
+                        <div>
+                            <Navbar.Text>
+                                Signed in as: {user[0].userName}
+                            </Navbar.Text>
+                            <Button onClick={props.handleLogout}>Log Out</Button> </div>
                         :
-                        <Button variant="outline" onClick={() => { setSessionStatus(true) }}>Log in</Button>
+                        <Button href='/sign-in'>Login</Button>
                     }
                 </Nav>
             </Navbar>

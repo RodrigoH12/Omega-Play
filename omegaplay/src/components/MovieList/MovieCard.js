@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "../../stylesheets/MovieCard.css";
+import { Link } from "react-router-dom";
 
 export default function MovieCard({ data }) {
 
@@ -30,7 +31,7 @@ export default function MovieCard({ data }) {
     }
 
     return (
-            <Card className="h-100 shadow-sm rounded" bg='dark'>
+            <Card className="h-100 shadow-sm rounded" bg='dark' onClick={()=>{console.log(data)}}>
                 <Card.Img variant="top" src={data.images[0]} className="movieCard"/>
                 <Card.Body className="d-flex flex-column">
                     <Card.Title className="text-left text-white text-uppercase">{data.title}</Card.Title>

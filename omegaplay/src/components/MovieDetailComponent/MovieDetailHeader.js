@@ -54,6 +54,11 @@ export default function MovieDetailHeader({ data }) {
         );
     };
 
+    const ToDateString = (date) =>{
+        var dateString = new Date(date).toLocaleDateString("en-US");
+        return dateString;
+    }
+
     return (
         <Jumbotron fluid style={{ padding: '20px' }}>
             <Row>
@@ -71,7 +76,7 @@ export default function MovieDetailHeader({ data }) {
                     <p>{data.duration}</p>
                     <br />
                     <br />
-                    <p size="10px">Release Date: {data.releaseDate}</p>
+                    <p size="10px">Release Date: {ToDateString(data.releaseDate)}</p>
                     <p>Genres: {getGenres(data.genres)}</p>
                     <p>Country: {data.country}</p>
                 </Col>
