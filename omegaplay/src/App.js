@@ -26,8 +26,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/*<div>
-          <ApplicationHeaderComponent />*/}
+        <ApplicationHeaderComponent />
         <Switch>
           <Route
             exact
@@ -43,7 +42,7 @@ function App() {
           <ProtectedRoute exact path='/home' user={user} component={Home} handleLogout={handleLogout} />
           <Route exact path="/sign-in" handleLogin={handleLogin} render={props => <Login {...props} user={user.toString()} handleLogin={handleLogin} />} />
           <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
-          <ProtectedRoute exact path="/avatar" handleLogin={handleLogin} render={props => <Avatar {...props} user={user.toString()} handleLogin={handleLogin} />} />
+          <ProtectedRoute exact path="/avatar" user={user.toString()} handleLogin={handleLogin} component={Avatar} />
         </Switch>
       </div>
     </Router>

@@ -33,7 +33,7 @@ export default function Register(props) {
             }
             if (pass === repeatPass) {
                 registerUser(userObject);
-                props.history.push('/avatars');
+                props.history.push('/avatar');
             } else {
                 alert("The passwords you entered doesn't match!");
             }
