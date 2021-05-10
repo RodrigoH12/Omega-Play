@@ -5,7 +5,8 @@ import "../../stylesheets/SideBarComponent.css"
 import { useHistory } from "react-router-dom";
 
 export default function ApplicationHeaderComponent() {
-    let history = useHistory();
+    const history = useHistory();
+    
     return (
         <>
             <ListGroup className="list-grouplink" align="left">
