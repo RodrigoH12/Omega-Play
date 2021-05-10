@@ -1,34 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../../stylesheets/MovieCard.css";
 import { Carousel } from "react-bootstrap";
-import axios from 'axios';
+import useStoreMovies from '../../zustand/movies';
 
 export default function MoviesCarousel() {
-  const [movies, setMovies] = useState([]);
+
+  const {getMoviesAxios, movies} = useStoreMovies();
 
   useEffect(() => {
-	
-		const getMoviesAxios = async () => {
-			try {
-				const {data} = await axios.get('http://localhost:4004/api/movie');
-        if (data !== undefined) {
-          const lastFiveMovies = data.slice(Math.max(data.length - 5, 0));
-				  setMovies(lastFiveMovies);
-        }
-			} catch (err) {
-				console.log(err);
-			}
-		};
-
-		getMoviesAxios();
-	
+    getMoviesAxios();
 	}, []);
 
   return (
-    <div style={{paddingTop: '94px', paddingBottom: '30px'}}>   
+    <div style={{paddingTop: '94px', paddingBottom: '30px'}}>
       <Carousel className="moviesCarousel">
         {
-          movies.map((movie) => {
+          movies.slice(Math.max(movies.length - 5, 0)).map((movie) => {
             return (
               <Carousel.Item interval={5000} key={movie._id}>
                 <img id="carouselImg"

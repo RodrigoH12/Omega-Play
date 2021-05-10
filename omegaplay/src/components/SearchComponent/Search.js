@@ -2,37 +2,60 @@ import React, { useState, useEffect } from 'react'
 import { InputGroup, FormControl, Container } from "react-bootstrap";
 import MovieCardGrid from "../MovieList/MovieCardGrid";
 import Filters from "./Filters";
-import axios from 'axios';
+import useStore from '../../zustand/filters';
+import useStoreMovies from '../../zustand/movies';
 
 export default function Search() {
 	const [search, setSearch] = useState("");
-	const [movies, setMovies] = useState([]);
+
+	const {genre, date, country} = useStore();
+	const {getMoviesAxios, movies} = useStoreMovies();
 
 	useEffect(() => {
-	
-		const getMoviesAxios = async () => {
-			try {
-				const {data} = await axios.get('http://localhost:4004/api/movie');
-				console.log(data);
-				setMovies(data);
-			} catch (err) {
-				console.log(err);
-			}
-		};
-
 		getMoviesAxios();
-	
 	}, []);
 
 	const filterMovies = () => {
 		var filteredResult = movies;
 
 		if (search !== "") {
-			filteredResult = movies.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()));
+			filteredResult = filteredResult.filter(movie => movie.title.toLowerCase().includes(search.toLowerCase()));
+		}
+		if (genre !== "All") {
+			filteredResult = filteredResult.filter(movie => movie.genres.includes(genre));
+		}
+		if (date !== "All") {
+			filteredResult = filteredResult.filter(movie => isOnDate(date, new Date(movie.releaseDate)));
+		}
+		if (country !== "All") {
+			filteredResult = filteredResult.filter(movie => movie.country === country);
 		}
 
 		return filteredResult;
 	};
+
+	const isOnDate = (filter, date) => {
+		var currentDate = new Date();
+		var onDate = false;
+	
+		if (filter === "This Week") {
+			var sevenDaysAgo = new Date()
+			sevenDaysAgo = new Date(sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7));
+			onDate = isBetween(date, sevenDaysAgo, currentDate);
+		} else if (filter === "This Month") {
+			var oneMonthAgo = new Date()
+			oneMonthAgo = new Date(oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1));
+			onDate = isBetween(date, oneMonthAgo, currentDate);
+		} else {
+			var oneYearAgo = new Date()
+			oneYearAgo = new Date(oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1));
+			onDate = isBetween(date, oneYearAgo, currentDate);
+		}
+
+		return onDate;
+	};
+
+	const isBetween = (date, min, max) => (date.getTime() >= min.getTime() && date.getTime() <= max.getTime());
 
 	return (
 		<Container>

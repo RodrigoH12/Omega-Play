@@ -7,5 +7,6 @@ router.post('/user', UserCtrl.registerUser)
 router.put('/user', UserCtrl.updateUserAvatar)
 router.delete('/user', UserCtrl.deleteUser)
 router.put('/user/history', UserCtrl.addMovieToHistory)
+router.put('/user/watch-later', UserCtrl.addMovieToWatchLater)
 
 module.exports = router

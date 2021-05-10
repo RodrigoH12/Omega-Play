@@ -11,7 +11,8 @@ const userSchema = new Schema({
     birthDate: {type: Date, require: true},
     country: {type: String, require: true},
     city: {type: String, require: true},
-    movies: [{type : Schema.ObjectId, ref:"movies", require:false}] 
+    history: [{type : Schema.ObjectId, ref:"movies", require:false}],
+    watchLater: [{type : Schema.ObjectId, ref:"movies", require:false}]
 });
 
 module.exports = mongoose.model('users', userSchema);

@@ -16,15 +16,6 @@ const useStore = create((set) => ({
             console.err(err);
         }
     },
-    /*fetchUsers: async () => {
-        try {
-            const { data } = await axios.get('http://localhost:4004/api/user');
-            console.log(data);
-            set({users : data});
-        } catch (err) {
-            console.err(err);
-        }
-    }*/
 })
 );
 
