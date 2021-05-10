@@ -1,6 +1,6 @@
-const UserCtrl = {}
-const User = require('../models/User')
-const ObjectId = require('mongodb').ObjectId
+const UserCtrl = {};
+const User = require('../models/User');
+const ObjectId = require('mongodb').ObjectId;
 
 UserCtrl.login = async (req, res) => {
     const userName = req.headers.username;
@@ -98,23 +98,23 @@ UserCtrl.addMovieToWatchLater = async (req, res) => {
 }
 
 UserCtrl.getHistory = async(req, res) => {
-    const userId = req.params.userId;
-    var _id = new ObjectId(userId);
-    const History = await User.find({"_id":_id}).populate("history");
-    if (History.length <= 0) {
-        res.json({ "response": "A user with that id was not found" });
+    const userid = req.params.userid;
+    var _id = new ObjectId(userid);
+    const history = await User.find({"_id":_id}).populate("history");
+    if (history.length <= 0) {
+        res.json({ "response": "A user with that username was not found" });
     }
-    res.json(History);
+    res.json(history);
 }
 
 UserCtrl.getWatchLater = async(req, res) => {
-    const userId = req.params.userId;
-    var _id = new ObjectId(userId);
-    const WatchLater = await User.find({"_id":_id}).populate("watchLater");
-    if (WatchLater.length <= 0) {
-        res.json({ "response": "A user with that id was not found" });
+    const userid = req.params.userid;
+    var _id = new ObjectId(userid);
+    const watchLater = await User.find({"_id":_id}).populate("watchLater");
+    if (watchLater.length <= 0) {
+        res.json({ "response": "A user with that username was not found" });
     }
-    res.json(WatchLater);
+    res.json(watchLater);
 }
 
 module.exports = UserCtrl

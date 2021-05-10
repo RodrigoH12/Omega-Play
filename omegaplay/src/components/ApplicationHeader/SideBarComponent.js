@@ -24,14 +24,14 @@ export default function ApplicationHeaderComponent() {
                         <Col>Search</Col>
                     </Row>
                 </ListGroup.Item>
-                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/movie")}}>
+                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/history")}}>
                     <Row >
                         <Col xs={1}></Col>
                         <Col xs={2}><Icon.Calendar /></Col>
                         <Col>History</Col>
                     </Row>
                 </ListGroup.Item>
-                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/movie")}}>
+                <ListGroup.Item action style={{ padding: "16px" }} onClick={()=>{history.push("/watch-later")}}>
                     <Row >
                         <Col xs={1}></Col>
                         <Col xs={2}><Icon.Clock /></Col>

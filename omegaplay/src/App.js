@@ -8,7 +8,8 @@ import React, { useState } from 'react';
 import Avatar from './components/Forms/Avatar';
 import ApplicationHeaderComponent from './components/ApplicationHeader/ApplicationHeaderComponent';
 import MovieDetail from './components/MovieDetailComponent/MovieDetail';
-
+import History from './components/UserLists/History';
+import WatchLater from './components/UserLists/WatchLater';
 
 function App() {
 
@@ -45,6 +46,8 @@ function App() {
           <Route exact path="/sign-up" handleLogin={handleLogin} render={props => <Register {...props} user={user.toString()} handleLogin={handleLogin} />} />
           <ProtectedRoute exact path="/avatar" user={user} handleLogin={handleLogin} component={Avatar} />
           <ProtectedRoute path="/movie/:id" user={user} handleLogin={handleLogin} component={MovieDetail} />
+          <ProtectedRoute exact path="/history" user={user} handleLogin={handleLogin} component={History} />
+          <ProtectedRoute exact path="/watch-later" user={user} handleLogin={handleLogin} component={WatchLater} />
         </Switch>
       </div>
     </Router>
