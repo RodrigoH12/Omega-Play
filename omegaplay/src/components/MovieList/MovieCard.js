@@ -1,7 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "../../stylesheets/MovieCard.css";
-import { Link } from "react-router-dom";
 
 export default function MovieCard({ data }) {
 
