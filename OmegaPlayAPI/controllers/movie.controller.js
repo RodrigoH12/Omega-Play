@@ -1,5 +1,6 @@
 const MovieCtrl = {}
 const Movie = require('../models/Movie')
+const ObjectId = require('mongodb').ObjectId; 
 
 MovieCtrl.getList = async(req, res) => {
     console.log("GetRequest");
@@ -7,6 +8,22 @@ MovieCtrl.getList = async(req, res) => {
     console.log(Movies);
     res.json(Movies);
 }
+
+MovieCtrl.getMovieId = async(req,res) =>{
+    const id = req.params.id;
+    var _id = new ObjectId(id);
+    const Movies = await Movie.find({"_id":_id});
+    console.log(Movies);
+    res.json(Movies);
+}
+
+MovieCtrl.getMovieName = async(req,res) =>{ 
+    const title = req.params.title;
+    const Movies = await Movie.find({"title":title});
+    console.log(Movies);
+    res.json(Movies);
+}
+
 MovieCtrl.saveMovie = async(req, res) => {
     console.log("Body:");
     console.log(req.body);
