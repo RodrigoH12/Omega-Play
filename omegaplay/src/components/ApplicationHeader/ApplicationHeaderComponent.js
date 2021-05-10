@@ -39,6 +39,7 @@ export default function ApplicationHeaderComponent(props) {
                             <Navbar.Text>
                                 Signed in as: {user[0].userName}
                             </Navbar.Text>
+                            {'   '}
                             <Button onClick={props.handleLogout}>Log Out</Button> </div>
                         :
                         <Button href='/sign-in'>Login</Button>
