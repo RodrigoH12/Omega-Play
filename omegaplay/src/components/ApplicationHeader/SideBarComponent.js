@@ -65,7 +65,7 @@ export default function ApplicationHeaderComponent() {
                         <Col>Watch Later</Col>
                     </Row>
                 </ListGroup.Item>
-                <ListGroup.Item action style={{ padding: "16px" }} onClick={() => { history.push("/avatar") }}>
+                <ListGroup.Item action style={{ padding: "16px" }} onClick={() => { history.push("/about") }}>
                     <Row >
                         <Col xs={1}></Col>
                         <Col xs={2}><Icon.Question /></Col>

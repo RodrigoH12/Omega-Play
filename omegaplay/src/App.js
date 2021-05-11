@@ -11,6 +11,7 @@ import MovieDetail from './components/MovieDetailComponent/MovieDetail';
 import History from './components/UserLists/History';
 import WatchLater from './components/UserLists/WatchLater';
 import Search from './components/SearchComponent/Search';
+import About from './components/About/About';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
             <ProtectedRoute exact path="/history" user={user} handleLogin={handleLogin} component={History} />
             <ProtectedRoute exact path="/watch-later" user={user} handleLogin={handleLogin} component={WatchLater} />
             <ProtectedRoute exact path="/search" user={user} handleLogin={handleLogin} component={Search} />
+            <ProtectedRoute exact path="/about" user={user} handleLogin={handleLogin} component={About} />
           </Switch>
         </div>
       </div>
