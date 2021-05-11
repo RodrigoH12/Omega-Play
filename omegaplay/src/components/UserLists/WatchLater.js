@@ -19,6 +19,7 @@ export default function WatchLater(props) {
             }
         };
         getWatchLaterAxios();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
@@ -26,15 +27,15 @@ export default function WatchLater(props) {
     return (
         <Container>
             <h1 style={{ color: "white" }}>Watch Later</h1>
-            <br/>
+            <br />
             {
-                watchLater.length ===0 ?
-                <>
-                <h3 style={{ color: "green" }}>This is currently empty.</h3>
-                <Link to="/home">Go Home</Link>
-                </>
-                :
-                <MovieCardGrid movies={watchLater}></MovieCardGrid>
+                watchLater.length === 0 ?
+                    <>
+                        <h3 style={{ color: "green" }}>This is currently empty.</h3>
+                        <Link to="/home">Go Home</Link>
+                    </>
+                    :
+                    <MovieCardGrid movies={watchLater}></MovieCardGrid>
             }
         </Container>
     );

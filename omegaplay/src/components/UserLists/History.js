@@ -19,6 +19,7 @@ export default function History(props) {
             }
         };
         getHistoryAxios();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
@@ -28,13 +29,13 @@ export default function History(props) {
             <h1 style={{ color: "white" }}>History</h1>
             <br />
             {
-                history.length ===0 ?
-                <>
-                <h3 style={{ color: "green" }}>This is currently empty.</h3>
-                <Link to="/home">Go Home</Link>
-                </>
-                :
-                <MovieCardGrid movies={history}></MovieCardGrid>
+                history.length === 0 ?
+                    <>
+                        <h3 style={{ color: "green" }}>This is currently empty.</h3>
+                        <Link to="/home">Go Home</Link>
+                    </>
+                    :
+                    <MovieCardGrid movies={history}></MovieCardGrid>
             }
         </Container>
     );

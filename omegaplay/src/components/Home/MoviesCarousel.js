@@ -5,14 +5,15 @@ import useStoreMovies from '../../zustand/movies';
 
 export default function MoviesCarousel() {
 
-  const {getMoviesAxios, movies} = useStoreMovies();
+  const { getMoviesAxios, movies } = useStoreMovies();
 
   useEffect(() => {
     getMoviesAxios();
-	}, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <div style={{ paddingBottom: '30px'}}>
+    <div style={{ paddingBottom: '30px' }}>
       <Carousel className="moviesCarousel">
         {
           movies.slice(Math.max(movies.length - 5, 0)).map((movie) => {
@@ -23,9 +24,6 @@ export default function MoviesCarousel() {
                   src={movie.images[0]}
                   alt=""
                 />
-                <Carousel.Caption>
-                  <h3>{movie.title}</h3>
-                </Carousel.Caption>
               </Carousel.Item>
             );
           })

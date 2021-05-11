@@ -16,13 +16,15 @@ export default function Login(props) {
 
     useEffect(() => {
         getMoviesAxios();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         if (username !== undefined && pass !== undefined) {
             fetchUser(username, pass);
         }
-    }, [username, pass, fetchUser]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [fetchUser]);
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
