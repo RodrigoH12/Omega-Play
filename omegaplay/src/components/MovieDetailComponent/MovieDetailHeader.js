@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Image, Row, Col, Jumbotron, Button } from "react-bootstrap";
+import { Image, Row, Col, Jumbotron, Button, Popover, OverlayTrigger } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import * as Icon from 'react-bootstrap-icons';
 import '../../stylesheets/MovieDetailHeader.css';
 import useStore from '../../zustand/login';
@@ -19,6 +20,22 @@ export default function MovieDetailHeader({ data }) {
     }
 
     const movieUrl = data.src;
+
+    const popoverButton = (e) => {
+        return (
+            <Popover id="popover-basic">
+                <Popover.Content>
+                    {data.title} has been added to
+                    <br />
+                    {e === "History" ?
+                        <Link to="/history"> {e}</Link>
+                        :
+                        <Link to="/watch-later"> {e}</Link>
+                    }
+                </Popover.Content>
+            </Popover>
+        );
+    };
 
     const getGenres = (genres) => {
         var result = '';
@@ -95,12 +112,16 @@ export default function MovieDetailHeader({ data }) {
                     <Row>
 
                         <Col align="right">
-                            <Button variant="text" onClick={() => { playButtonClick("play") }} href={movieUrl} target="_blank" rel="noopener noreferrer">
-                                <Icon.PlayFill size={50} />
-                            </Button>
-                            <Button variant="text" onClick={() => { playButtonClick("watchLater") }}>
-                                <Icon.ClockFill size={30} />
-                            </Button>
+                            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverButton("History")} transition>
+                                <Button variant="text" onClick={() => { playButtonClick("play") }} href={movieUrl} target="_blank" rel="noopener noreferrer">
+                                    <Icon.PlayFill size={50} />
+                                </Button>
+                            </OverlayTrigger>
+                            <OverlayTrigger trigger="click" placement="bottom" overlay={popoverButton("Watch Later")} transition>
+                                <Button variant="text" onClick={() => { playButtonClick("watchLater") }}>
+                                    <Icon.ClockFill size={30} />
+                                </Button>
+                            </OverlayTrigger>
                         </Col>
                     </Row>
 
