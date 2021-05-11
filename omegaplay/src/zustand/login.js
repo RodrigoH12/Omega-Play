@@ -45,6 +45,22 @@ const useStore = create((set) => ({
             console.err(err);
         }
     },
+    addMovieHistory: async (userObject, movie) => {
+        try {
+            const { data } = await axios.put(`http://localhost:4004/api/user/history?userName=${userObject[0].userName}&movie=${movie}`);
+            set((state) => ({ user: data }));
+        } catch (err) {
+            console.err(err);
+        }
+    },
+    addMovieLater: async (userObject, movie) => {
+        try {
+            const { data } = await axios.put(`http://localhost:4004/api/user/watch-later?userName=${userObject[0].userName}&movie=${movie}`);
+            set((state) => ({ user: data }));
+        } catch (err) {
+            console.err(err);
+        }
+    },
 })
 );
 

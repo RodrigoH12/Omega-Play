@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
 import { Image, Row, Col, Jumbotron, Button } from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
-import '../../stylesheets/MovieDetailHeader.css'
+import '../../stylesheets/MovieDetailHeader.css';
+import useStore from '../../zustand/login';
 
 export default function MovieDetailHeader({ data }) {
     const [showScore, setShowScore] = useState(false);
+    const addMovieHistory = useStore(state => state.addMovieHistory);
+    const addMovieLater = useStore(state => state.addMovieLater);
+    const user = useStore(state => state.user);
 
     const playButtonClick = (e) => {
-        console.log("Pressed " + e);
+        if (e === "play") {
+            addMovieHistory(user, data._id);
+        } else {
+            addMovieLater(user, data._id);
+        }
     }
+
+    const movieUrl = data.src;
+
     const getGenres = (genres) => {
         var result = '';
         genres.forEach(genre => {
@@ -54,7 +65,7 @@ export default function MovieDetailHeader({ data }) {
         );
     };
 
-    const ToDateString = (date) =>{
+    const ToDateString = (date) => {
         var dateString = new Date(date).toLocaleDateString("en-US");
         return dateString;
     }
@@ -84,10 +95,10 @@ export default function MovieDetailHeader({ data }) {
                     <Row>
 
                         <Col align="right">
-                            <Button variant="text" onClick={() => playButtonClick("play")}>
+                            <Button variant="text" onClick={() => { playButtonClick("play") }} href={movieUrl} target="_blank" rel="noopener noreferrer">
                                 <Icon.PlayFill size={50} />
                             </Button>
-                            <Button variant="text" onClick={() => playButtonClick("watchLater")}>
+                            <Button variant="text" onClick={() => { playButtonClick("watchLater") }}>
                                 <Icon.ClockFill size={30} />
                             </Button>
                         </Col>

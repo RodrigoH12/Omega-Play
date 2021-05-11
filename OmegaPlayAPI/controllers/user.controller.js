@@ -74,7 +74,8 @@ UserCtrl.deleteUser = async (req, res) => {
 UserCtrl.addMovieToHistory = async (req, res) => {
     const userName = req.query.userName;
     const movie = req.query.movie;
-    await User.updateOne({ "userName": userName }, { $addToSet: { "history": movie } });
+    const movieObj = new ObjectId(movie);
+    await User.updateOne({ "userName": userName }, { $addToSet: { "history": movieObj} });
     const updatedUser = await User.find({ userName: userName });
 
     if (updatedUser.length <= 0) {
@@ -87,7 +88,8 @@ UserCtrl.addMovieToHistory = async (req, res) => {
 UserCtrl.addMovieToWatchLater = async (req, res) => {
     const userName = req.query.userName;
     const movie = req.query.movie;
-    await User.updateOne({ "userName": userName }, { $addToSet: { "watchLater": movie } });
+    const movieObj = new ObjectId(movie);
+    await User.updateOne({ "userName": userName }, { $addToSet: { "watchLater": movieObj } });
     const updatedUser = await User.find({ userName: userName });
 
     if (updatedUser.length <= 0) {
