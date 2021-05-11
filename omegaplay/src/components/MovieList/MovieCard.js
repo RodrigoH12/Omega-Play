@@ -1,16 +1,13 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "../../stylesheets/MovieCard.css";
-import useStore from '../../zustand/movie';
 import { useHistory } from "react-router-dom";
 
 export default function MovieCard({ data }) {
    
     const history = useHistory();
-    const setMovieId = useStore(state => state.setMovieId);
 
     const OpenMovieDetails = () => {
-        setMovieId(data) ;
         history.push("/movie/"+data._id);
     }
 
