@@ -7,7 +7,7 @@ import '../../stylesheets/About.css';
 export default function About() {
     return (
         <div>
-            <Jumbotron fluid>
+            <Jumbotron fluid className="about">
                 <Container>
                     <Image src={logo} width="120px"></Image>
                     <h3>About Us</h3>
