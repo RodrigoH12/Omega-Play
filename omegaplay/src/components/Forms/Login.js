@@ -24,7 +24,7 @@ export default function Login(props) {
             fetchUser(username, pass);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [fetchUser]);
+    }, [fetchUser,username,pass]);
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
