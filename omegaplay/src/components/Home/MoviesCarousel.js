@@ -16,7 +16,7 @@ export default function MoviesCarousel() {
     <div style={{ paddingBottom: '30px' }}>
       <Carousel className="moviesCarousel">
         {
-          movies.slice(Math.max(movies.length - 5, 0)).map((movie) => {
+          movies.slice(Math.max(movies.length - 10, 0)).map((movie) => {
             return (
               <Carousel.Item interval={5000} key={movie._id}>
                 <img id="carouselImg"

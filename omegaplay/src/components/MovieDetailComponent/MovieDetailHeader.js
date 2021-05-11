@@ -88,7 +88,7 @@ export default function MovieDetailHeader({ data }) {
     }
 
     return (
-        <Jumbotron fluid style={{ padding: '20px' }}>
+        <Jumbotron fluid className="movie-detail-header">
             <Row>
                 <Col md={5}>
                     <Image className="movieThumbnail" src={data.images[0]} />
