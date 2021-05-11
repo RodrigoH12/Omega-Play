@@ -6,6 +6,10 @@
     padding: 20px;
 }
 
+.contactTab svg{
+    color: #0ca789;
+}
+
 p, ul, li, h2, h5, h6, b {
     text-align: left;
     color: #ffffff;

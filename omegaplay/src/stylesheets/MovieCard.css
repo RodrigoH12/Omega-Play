@@ -3,6 +3,10 @@
     min-width: 340px;
 }
 
+.movie-card svg{
+    color: #0ca789;
+}
+
 .card-img-top.movie-card-img {
     width: 100%;
     height: 350px;

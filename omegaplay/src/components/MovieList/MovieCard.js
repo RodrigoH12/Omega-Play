@@ -33,7 +33,7 @@ export default function MovieCard({ data }) {
             month = '0' + month;
         }
 
-        result = dt + '-' + month + '-' + year;
+        result = dt + '/' + month + '/' + year;
         return result;
     }
 
@@ -43,7 +43,7 @@ export default function MovieCard({ data }) {
                 <Card.Body className="d-flex flex-column">
                     <Card.Title className="text-left text-white text-uppercase">{data.title}</Card.Title>
                     <div>
-                        <Card.Text className="alignleft"><Icon.StarFill style={{marginBottom: '5px'}}/> {data.calification}/5</Card.Text>
+                        <Card.Text className="alignleft"><Icon.StarFill style={{marginBottom: '5px'}}/> {data.calification}</Card.Text>
                         <Card.Text className="alignright"><Icon.CalendarEvent style={{marginBottom: '5px'}}/> {changeDateformat(new Date(data.releaseDate))}</Card.Text>
                     </div>
                     <Card.Text>Country: {data.country}</Card.Text>

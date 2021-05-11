@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Navbar, Nav, Image } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import SideBarComponent from "./SideBarComponent";
-import logo from "../../assets/omega.png";
+import logo from "../../assets/omegaLogo3.png";
 import useStore from '../../zustand/login';
 import "../../stylesheets/ApplicationHeaderComponent.css";
 import { useHistory } from "react-router-dom";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListGroup, Row, Col, Badge, Image } from "react-bootstrap";
+import { ListGroup, Row, Col, Image } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import "../../stylesheets/SideBarComponent.css"
 import { useHistory } from "react-router-dom";

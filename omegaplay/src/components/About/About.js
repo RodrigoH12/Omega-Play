@@ -24,7 +24,7 @@ export default function About() {
                             </p>
                             <p>We hope you enjoy using our system! <Icon.EmojiSmile/></p>
                         </Tab>
-                        <Tab eventKey="contact" title="Contact Us">
+                        <Tab eventKey="contact" title="Contact Us" className="contactTab">
                             <ul>
                                 <Icon.PersonFill />{" Carla Barrientos"}
                                 <ul>
