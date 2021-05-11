@@ -43,3 +43,14 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.FilterTitles{
+    color: white;
+    padding-top: 17px;
+    padding-left: 10px;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: scroll;
+}
