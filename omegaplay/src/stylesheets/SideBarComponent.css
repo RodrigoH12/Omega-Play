@@ -1,3 +1,18 @@
 .list-grouplink{
     width: 100%;
 }
+
+.sideBarButtons, .sideBarInfo{
+    background-color: #262626;
+}
+
+.sideBarButtons:hover, .sideBarButtons:focus{
+    background-color: #0CA789;
+    color: #ffffff;
+}
+
+svg {
+    color: #ffffff;
+}
+
+

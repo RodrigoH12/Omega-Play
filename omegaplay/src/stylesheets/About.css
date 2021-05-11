@@ -6,17 +6,19 @@
     padding: 20px;
 }
 
-p, ul, li, h5 {
+p, ul, li, h2, h5, h6, b {
     text-align: left;
     color: #ffffff;
 }
 
-h3, svg {
+h3 {
     color: #0ca789;
 }
+
 .nav-item.nav-link.active{
     color:#0ca789;
 }
+
 a:hover{
     color:#0ca789
 }

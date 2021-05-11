@@ -1,11 +1,12 @@
 .header-toolbar{
+    background-color: #0CA789 !important;
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
 .sidebar{
-    background-color: #272727;
+    background-color: #262626;
     top: 64px;
     left: 0px;
     width: 220px;
@@ -29,6 +30,16 @@
 
 .clickableItem{
     cursor: pointer;
+    color: #ffffff !important;
+}
+
+.menuicon{
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.header-buttons{
+    background-color: #262626;
 }
 
 .textProfile{

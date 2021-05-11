@@ -50,7 +50,7 @@ export default function Login(props) {
                     <Form.Group controlId="formGroupEmail" className="form-group">
                         <Carousel interval={3000}>
                             {
-                                movies.slice(Math.max(movies.length - 10, 0)).map((movie) => {
+                                movies.slice(Math.max(movies.length - 5, 0)).map((movie) => {
                                     return (
                                         <Carousel.Item key={movie._id}>
                                             <img

@@ -14,12 +14,12 @@ export default function ApplicationHeaderComponent(props) {
 
     return (
         <div className="header-toolbar">
-            <Navbar className="justify-content-between" bg="dark" expand="lg" style={{ height: "64px" }}>
+            <Navbar className="justify-content-between" expand="lg" style={{ height: "64px" }}>
                 <Navbar id="basic-navbar-nav">
                     <Nav>
                         {props.user ?
-                            <div style={{marginRight:"20px"}}>
-                                <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
+                            <div>
+                                <Icon.List size="40px" className="menuicon" onClick={() => { setSidebar(!sidebar) }} />
                                 <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
                                     <SideBarComponent />
                                 </div>
@@ -39,9 +39,9 @@ export default function ApplicationHeaderComponent(props) {
                             <Navbar.Text style={{marginRight:"10px"}}>
                                 Signed in as: <Navbar.Text className="text-white">{user[0].userName}</Navbar.Text>
                             </Navbar.Text>
-                            <Button onClick={props.handleLogout}>Log Out</Button> </div>
+                            <Button onClick={props.handleLogout} className="header-buttons">Log Out</Button> </div>
                         :
-                        <Button href='/sign-in'>Login</Button>
+                        <Button href="/sign-in" className="header-buttons">Login</Button>
                     }
                 </Nav>
             </Navbar>

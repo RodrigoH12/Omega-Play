@@ -11,7 +11,7 @@ export default function MovieDetailExtended({ data }) {
         return result.slice(0, -2);
     };
     return (
-        <Jumbotron fluid style={{ padding: '20px' }}>
+        <Jumbotron fluid className="movie-detail">
             <Col align="justify">
                 <Row>
                     <Col md={3}>

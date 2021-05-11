@@ -1,5 +1,10 @@
-.movieArtwork {
+.movieArtwork{
     object-fit: cover;
     height: 100%;
     max-width: 100%;
+}
+
+.movie-detail{
+    background-color: #424242;
+    padding: 20px;
 }

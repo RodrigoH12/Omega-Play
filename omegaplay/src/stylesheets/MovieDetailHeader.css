@@ -1,6 +1,11 @@
-.movieThumbnail {
+.movieThumbnail{
     object-fit: cover;
     height: 100%;
     max-height: 300px;
     max-width: 100%;
+}
+
+.movie-detail-header{
+    background-color: #424242;
+    padding: 20px;
 }

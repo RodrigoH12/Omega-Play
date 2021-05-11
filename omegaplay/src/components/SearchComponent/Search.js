@@ -8,11 +8,14 @@ import useStoreMovies from '../../zustand/movies';
 export default function Search() {
 	const [search, setSearch] = useState("");
 
-	const { genre, date, country } = useStore();
+	const { genre, date, country, setGenre, setDate, setCountry } = useStore();
 	const { getMoviesAxios, movies } = useStoreMovies();
 
 	useEffect(() => {
 		getMoviesAxios();
+		setGenre("All");
+		setDate("All");
+		setCountry("All");
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
