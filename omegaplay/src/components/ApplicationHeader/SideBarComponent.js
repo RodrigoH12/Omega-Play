@@ -9,8 +9,6 @@ import images from '../../mockedData/data.json'
 export default function ApplicationHeaderComponent() {
     const history = useHistory();
     const user = useStore(state => state.user);
-    const avatars = images;
-
     const ToDateString = (date) => {
         var dateString = new Date(date).toLocaleDateString("en-US");
         return dateString;

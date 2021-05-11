@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Navbar, Nav, Image } from "react-bootstrap";
 import * as Icon from "react-bootstrap-icons";
 import SideBarComponent from "./SideBarComponent";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/omega.png";
 import useStore from '../../zustand/login';
 import "../../stylesheets/ApplicationHeaderComponent.css";
 import { useHistory } from "react-router-dom";
@@ -18,7 +18,7 @@ export default function ApplicationHeaderComponent(props) {
                 <Navbar id="basic-navbar-nav">
                     <Nav>
                         {props.user ?
-                            <div style={{marginRight:"10px"}}>
+                            <div style={{marginRight:"20px"}}>
                                 <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
                                 <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
                                     <SideBarComponent />

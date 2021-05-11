@@ -8,11 +8,12 @@ import useStoreMovies from '../../zustand/movies';
 export default function Search() {
 	const [search, setSearch] = useState("");
 
-	const {genre, date, country} = useStore();
-	const {getMoviesAxios, movies} = useStoreMovies();
+	const { genre, date, country } = useStore();
+	const { getMoviesAxios, movies } = useStoreMovies();
 
 	useEffect(() => {
 		getMoviesAxios();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const filterMovies = () => {
@@ -37,7 +38,7 @@ export default function Search() {
 	const isOnDate = (filter, date) => {
 		var currentDate = new Date();
 		var onDate = false;
-	
+
 		if (filter === "This Week") {
 			var sevenDaysAgo = new Date()
 			sevenDaysAgo = new Date(sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7));
@@ -60,9 +61,9 @@ export default function Search() {
 	return (
 		<Container>
 			<InputGroup className="mb-3">
-				<FormControl placeholder="Search for a movie" onChange={(e) => setSearch(e.target.value)}/>
+				<FormControl placeholder="Search for a movie" onChange={(e) => setSearch(e.target.value)} />
 			</InputGroup>
-			<Filters/>
+			<Filters />
 			<MovieCardGrid movies={filterMovies()}></MovieCardGrid>
 		</Container>
 	);
