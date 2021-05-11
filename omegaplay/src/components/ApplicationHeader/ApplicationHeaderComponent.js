@@ -18,7 +18,7 @@ export default function ApplicationHeaderComponent(props) {
                 <Navbar id="basic-navbar-nav">
                     <Nav>
                         {props.user ?
-                            <div>
+                            <div style={{marginRight:"10px"}}>
                                 <Icon.List size="40px" onClick={() => { setSidebar(!sidebar) }} />
                                 <div className={sidebar ? "sidebar sidebarOn" : "sidebar sidebarOff"}>
                                     <SideBarComponent />
@@ -27,7 +27,7 @@ export default function ApplicationHeaderComponent(props) {
                             :
                             <div />
                         }
-                        <Navbar.Brand onClick={() => { history.push("/") }} className="navigationBarBrand">
+                        <Navbar.Brand onClick={() => { history.push("/") }} className="clickableItem" style={{marginLeft:"10px"}}>
                             <Image src={logo} width="50px"></Image>{' '}
                             Omega Play
                         </Navbar.Brand>
@@ -36,10 +36,9 @@ export default function ApplicationHeaderComponent(props) {
                 <Nav>
                     {props.user ?
                         <div>
-                            <Navbar.Text>
-                                Signed in as: {user[0].userName}
+                            <Navbar.Text style={{marginRight:"10px"}}>
+                                Signed in as: <Navbar.Text className="text-white">{user[0].userName}</Navbar.Text>
                             </Navbar.Text>
-                            {'   '}
                             <Button onClick={props.handleLogout}>Log Out</Button> </div>
                         :
                         <Button href='/sign-in'>Login</Button>
