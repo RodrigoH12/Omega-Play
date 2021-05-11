@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const useStoreMovies = create((set) => ({
     movies: [{
+        _id: {},
         genres: [{}],
         directors: [{}],
         cast: [{}],
