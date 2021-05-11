@@ -39,7 +39,7 @@ export default function About() {
 
                                 <Icon.PersonFill />{" Juan Diego García"}
                                 <ul>
-                                    <Icon.EnvelopeFill />{ }
+                                    <Icon.EnvelopeFill />{ "juandigv69@gmail.com"}
                                 </ul>
                                 <ul>
                                     <Icon.TelephoneFill />{" +591 79955250"}
@@ -49,7 +49,7 @@ export default function About() {
                                 </ul>
                                 <Icon.PersonFill />{" Rodrigo Heredia"}
                                 <ul>
-                                    <Icon.EnvelopeFill />{ }
+                                    <Icon.EnvelopeFill />{ "rodrigoh1205@gmail.com"}
                                 </ul>
                                 <ul>
                                     <Icon.TelephoneFill />{" +591 79978344"}
