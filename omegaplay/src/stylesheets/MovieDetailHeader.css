@@ -10,8 +10,25 @@
     padding: 20px;
 }
 
-
-
 .movie-detail-header svg{
     color: #0ca789;
 }
+
+.movieDetailPopup .popover-body{
+    color: black;
+}
+
+.movieOverlay .arrow{
+    color: black;
+    background-color: black;
+}
+
+.popupLink:hover{
+    color: #0ca789;
+}
+
+.popupLink, .tooltip-arrow{
+    color: black;
+}
+
+
