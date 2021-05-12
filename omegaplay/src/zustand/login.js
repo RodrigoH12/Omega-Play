@@ -24,7 +24,7 @@ const useStore = create((set) => ({
             });
             set((state) => ({ user: data }));
         } catch (err) {
-            console.err(err);
+            console.log(err);
         }
     },
     registerUser: async (userObject) => {
@@ -34,7 +34,7 @@ const useStore = create((set) => ({
             });
             set((state) => ({ user: data }));
         } catch (err) {
-            console.err(err);
+            console.log(err);
         }
     },
     addAvatar: async (userObject, avatar) => {
@@ -42,7 +42,7 @@ const useStore = create((set) => ({
             const { data } = await axios.put(`http://localhost:4004/api/user?userName=${userObject[0].userName}&avatar=${avatar}`);
             set((state) => ({ user: data }));
         } catch (err) {
-            console.err(err);
+            console.log(err);
         }
     },
     addMovieHistory: async (userObject, movie) => {
@@ -50,7 +50,7 @@ const useStore = create((set) => ({
             const { data } = await axios.put(`http://localhost:4004/api/user/history?userName=${userObject[0].userName}&movie=${movie}`);
             set((state) => ({ user: data }));
         } catch (err) {
-            console.err(err);
+            console.log(err);
         }
     },
     addMovieLater: async (userObject, movie) => {
@@ -58,7 +58,7 @@ const useStore = create((set) => ({
             const { data } = await axios.put(`http://localhost:4004/api/user/watch-later?userName=${userObject[0].userName}&movie=${movie}`);
             set((state) => ({ user: data }));
         } catch (err) {
-            console.err(err);
+            console.log(err);
         }
     },
 })
