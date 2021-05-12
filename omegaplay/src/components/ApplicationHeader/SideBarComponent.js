@@ -10,7 +10,7 @@ export default function ApplicationHeaderComponent() {
     const history = useHistory();
     const user = useStore(state => state.user);
     const ToDateString = (date) => {
-        var dateString = new Date(date).toLocaleDateString("en-US");
+        var dateString = new Date(date).toLocaleDateString("en-GB");
         return dateString;
     }
 

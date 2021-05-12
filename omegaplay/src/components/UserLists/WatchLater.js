@@ -21,7 +21,7 @@ export default function WatchLater(props) {
             {
                 movies.length === 0 ?
                     <>
-                        <h3 style={{ color: "green" }}>This is currently empty.</h3>
+                        <h3 style={{ color: "#0ca789" }}>This is currently empty.</h3>
                         <Link to="/home">Go Home</Link>
                     </>
                     :
