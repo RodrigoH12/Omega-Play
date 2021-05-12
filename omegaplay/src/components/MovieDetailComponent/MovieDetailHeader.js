@@ -82,7 +82,7 @@ export default function MovieDetailHeader({ data }) {
     };
 
     const ToDateString = (date) => {
-        var dateString = new Date(date).toLocaleDateString("en-US");
+        var dateString = new Date(date).toLocaleDateString("en-GB");
         return dateString;
     }
 
