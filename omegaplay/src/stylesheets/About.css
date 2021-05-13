@@ -1,0 +1,28 @@
+.jumbotron.about {
+    background-color: #262626;
+    width: 1000px;
+    height: 520px;
+    margin: auto;
+    padding: 20px;
+}
+
+.contactTab svg{
+    color: #0ca789;
+}
+
+p, ul, li, h2, h5, h6, b {
+    text-align: left;
+    color: #ffffff;
+}
+
+h3 {
+    color: #0ca789;
+}
+
+.nav-item.nav-link.active{
+    color:#0ca789;
+}
+
+a:hover{
+    color:#0ca789
+}

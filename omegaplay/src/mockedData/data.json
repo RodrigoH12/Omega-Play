@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "src": "./images/ariel.png"
+    },
+    {
+        "id": 2,
+        "src": "./images/bible.png"
+    },
+    {
+        "id": 3,
+        "src": "./images/creeper.png"
+    },
+    {
+        "id": 4,
+        "src": "./images/mando.png"
+    },
+    {
+        "id": 5,
+        "src": "./images/minnie.png"
+    },
+    {
+        "id": 6,
+        "src": "./images/monkey.png"
+    },
+    {
+        "id": 7,
+        "src": "./images/panda.png"
+    },
+    {
+        "id": 8,
+        "src": "./images/skull.png"
+    },
+    {
+        "id": 9,
+        "src": "./images/spider.png"
+    }
+]

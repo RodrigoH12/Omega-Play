@@ -1,0 +1,61 @@
+.header-toolbar{
+    background-color: #0CA789 !important;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.sidebar{
+    background-color: #1f1f1f;
+    top: 64px;
+    left: 0px;
+    width: 220px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.sidebarOn{
+    animation-name: appear;
+    animation-duration: 1000ms;
+}
+
+.sidebarOff{
+    opacity: 0;
+    left:-300px;
+    animation-name: dissappear;
+    animation-duration: 1000ms;
+}
+
+.clickableItem{
+    cursor: pointer;
+    color: #ffffff !important;
+}
+
+.menuicon{
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.header-buttons{
+    background-color: #1f1f1f;
+}
+
+.textProfile{
+    font-size: 13px;
+    margin: 0px;
+}
+
+@keyframes appear {
+    0%   {left:-300px; opacity: 0; }
+    90%   {opacity: 1; }
+    100% {left:0px; opacity: 1;}
+}
+
+@keyframes dissappear {
+    0% {left:0px; opacity: 1;}
+    80%   {opacity: 0; }
+    100%   {left:-300px; opacity: 0; }
+}
+

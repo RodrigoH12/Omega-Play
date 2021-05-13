@@ -1,0 +1,66 @@
+.movie-card{
+    background-color: #424242;
+    min-width: 340px;
+}
+
+.movie-card svg{
+    color: #0ca789;
+}
+
+.card-img-top.movie-card-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-text{
+    font-size:16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    color: white;
+}
+
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.253) !important;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.carousel.moviesCarousel {
+    width: 1100px;
+    height: 500px;
+    margin: auto;
+}
+
+#carouselImg{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#dropdown-basic-button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #424242;
+}
+
+.FilterTitles{
+    color: white;
+    padding-top: 17px;
+    padding-left: 10px;
+}
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: scroll;
+}

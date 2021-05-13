@@ -1,0 +1,29 @@
+.movieThumbnail{
+    object-fit: cover;
+    height: 100%;
+    max-height: 300px;
+    max-width: 100%;
+}
+
+.movie-detail-header{
+    background-color: #424242;
+    padding: 20px;
+}
+
+.movie-detail-header svg{
+    color: #0ca789;
+}
+
+.movieDetailPopup .popover-body{
+    color: black;
+}
+
+.popupLink:hover{
+    color: #0ca789;
+}
+
+.popupLink, .tooltip-arrow{
+    color: black;
+}
+
+
